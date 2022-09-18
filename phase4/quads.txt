@@ -1,0 +1,30 @@
+#Quad     Opcode                   Arg1                Arg2           Result    Label     
+---------------------------------------------------------------------------------------------------------------
+1         FUNCSTART                f                                             
+2         IF_EQ                    x                   5.000000                 5          
+3         ASSIGN                   FALSE                               _t0                 
+4         JUMP                                                                    6          
+5         ASSIGN                   TRUE                                _t0                 
+6         IF_EQ                    _t0                 TRUE                          8          
+7         JUMP                                                                    9          
+8         RET                      5.000000                                      
+9         IF_EQ                    y                   4.000000                 12         
+10        ASSIGN                   FALSE                               _t0                 
+11        JUMP                                                                    13         
+12        ASSIGN                   TRUE                                _t0                 
+13        IF_EQ                    _t0                 TRUE                          15         
+14        JUMP                                                                    16         
+15        RET                      4.000000                                      
+16        FUNCEND                  f                                             
+17        ASSIGN                   3.000000                            z         
+18        ASSIGN                   z                                   _t0       
+19        PARAM                    4.000000                                      
+20        PARAM                    5.000000                                      
+21        CALL                     f                                             
+22        GETRETVAL                                                     _t0       
+23        ASSIGN                   _t0                                 g         
+24        ASSIGN                   g                                   _t1       
+25        PARAM                    g                                             
+26        PARAM                    z                                             
+27        CALL                     print                                         
+28        GETRETVAL                                                     _t0       
